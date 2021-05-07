@@ -16,16 +16,23 @@ body {
   display: flex;
   max-width: 200px;
   justify-content: space-around;
-  padding: 0 20px;
   cursor: pointer;
+  letter-spacing: 0.35em;
+  margin-left: 30px;
+  font-weight: bold;
 }
 
-.logo:hover {
+.fa-gem {
+  margin: 0 20px;
+}
+
+.logo div:hover {
   color: #f2849e;
 }
 
 .container {
   max-width: 1280px;
+  max-width: 1350px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -46,7 +53,8 @@ body {
 }
 
 .container h1 {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+  font-size: 2.5em;
 }
 
 .flex-grid {
@@ -112,10 +120,22 @@ img {
   flex: 1;
 }
 
+.form-section {
+  padding-left: 15px;
+}
+
+.contact-section h2 {
+  padding-left: 10px;
+}
+
 .form-section h2,
 .contact-section h2 {
   margin-bottom: 70px;
+  letter-spacing: 0.35em;
+  /* font-weight: 700; */
+  font-size: 1em;
 }
+
 
 .form {
   display: flex;
@@ -169,7 +189,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin: 10px;
-  padding: 13px 0px;
+  padding: 10px 0px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -277,4 +297,32 @@ button:hover {
   .copyright div {
     font-size: 12pt;
   }
+}
+/*  *
+* {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+* * {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+* * * {
+  background-color: rgba(0, 0, 255, 0.2);
+}
+* * * * {
+  background-color: rgba(255, 0, 255, 0.2);
+}
+* * * * * {
+  background-color: rgba(0, 255, 255, 0.2);
+}
+* * * * * * {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+* * * * * * * {
+  background-color: rgba(255, 0, 0, 0.2);
+}
+* * * * * * * * {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+* * * * * * * * * {
+  background-color: rgba(0, 0, 255, 0.2);
 }
