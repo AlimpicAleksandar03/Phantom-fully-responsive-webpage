@@ -7,7 +7,7 @@
 body {
   color: #585858;
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  font-size: 16pt;
+  font-size: 17pt;
   font-weight: 300;
   line-height: 1.5;
 }
@@ -17,6 +17,11 @@ body {
   max-width: 200px;
   justify-content: space-around;
   padding: 0 20px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #f2849e;
 }
 
 .container {
@@ -26,12 +31,18 @@ body {
 }
 
 .header-main {
-  padding: 200px 0px 50px 0px;
+  padding: 150px 0px 50px 0px;
 }
 
 .introduction h1,
 .introduction p {
   padding: 0 20px;
+}
+
+.introduction a {
+  text-decoration: none;
+  color: #585858;
+  border-bottom: 1px dotted #c9c9c9;
 }
 
 .container h1 {
@@ -48,11 +59,41 @@ body {
 .project-tile {
   flex-basis: calc(100% / 3);
   padding: 15px 20px;
+  position: relative;
 }
 
 img {
+  opacity: 1;
+  display: block;
   width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.hover-text {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: black;
+}
+
+.p {
+  margin-bottom: 20px;
+}
+
+.project-tile:hover img {
+  opacity: 0.3;
+}
+
+.container:hover .hover-text {
+  opacity: 1;
 }
 
 .footer {
@@ -87,21 +128,32 @@ img {
   width: 40%;
   margin-bottom: 50px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #c9c9c9;
   padding: 0 20px 20px 0px;
 }
 
 .message {
   width: 81%;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #c9c9c9;
   padding: 0 20px 20px 0px;
   margin-bottom: 40px;
 }
 
 button {
-  padding: 10px 30px;
+  padding: 15px 35px;
   cursor: pointer;
+  background-color: #585858;
+  color: #ffffff;
+  box-shadow: none;
+  border: none;
+  font-size: 1em;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+button:hover {
+  background: #f2849e;
 }
 
 .contact {
@@ -112,7 +164,7 @@ button {
 
 .contact li {
   width: 55px;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: solid 1px #c9c9c9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,6 +196,10 @@ button {
   color: #585858;
 }
 
+.container a:hover {
+  color: #f2849e;
+}
+
 @media screen and (max-width: 1280px) {
   .container {
     max-width: 980px;
@@ -153,8 +209,8 @@ button {
     padding-top: 70px;
   }
 
-  body {
-    font-size: 13pt;
+  .logo {
+    font-size: 15pt;
   }
 }
 
@@ -198,6 +254,27 @@ button {
 
 @media screen and (max-width: 730px) {
   body {
-    font-size: 10pt;
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .copyright {
+    flex-direction: column;
+  }
+
+  .copyright > div {
+    padding: 20px 0px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 16pt;
+  }
+}
+
+/* extra small devices */
+@media screen and (max-width: 336px) {
+  .copyright div {
+    font-size: 12pt;
   }
 }
