@@ -20,14 +20,11 @@ body {
   letter-spacing: 0.35em;
   margin-left: 30px;
   font-weight: bold;
+  font-size: 17px;
 }
 
 .fa-gem {
   margin: 0 20px;
-}
-
-.logo div:hover {
-  color: #f2849e;
 }
 
 .container {
@@ -81,27 +78,8 @@ img {
   cursor: pointer;
 }
 
-.hover-text {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: black;
-}
-
 .p {
   margin-bottom: 20px;
-}
-
-.project-tile:hover img {
-  opacity: 0.3;
-}
-
-.container:hover .hover-text {
-  opacity: 1;
 }
 
 .footer {
@@ -136,7 +114,6 @@ img {
   font-size: 1em;
 }
 
-
 .form {
   display: flex;
   flex-wrap: wrap;
@@ -156,7 +133,7 @@ img {
   width: 81%;
   border: none;
   border-bottom: 1px solid #c9c9c9;
-  padding: 0 20px 20px 0px;
+  padding: 0 20px 40px 0px;
   margin-bottom: 40px;
 }
 
@@ -170,10 +147,6 @@ button {
   font-size: 1em;
   border-radius: 5px;
   font-weight: 800;
-}
-
-button:hover {
-  background: #f2849e;
 }
 
 .contact {
@@ -190,7 +163,7 @@ button:hover {
   align-items: center;
   margin: 10px;
   padding: 10px 0px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -201,7 +174,6 @@ button:hover {
 .copyright {
   display: flex;
   padding: 100px 0px 50px 0px;
-  max-width: 100%;
   margin: 0;
   font-size: 15px;
 }
@@ -214,10 +186,7 @@ button:hover {
 .copyright div a {
   text-decoration: none;
   color: #585858;
-}
-
-.container a:hover {
-  color: #f2849e;
+  border-bottom: 1px dotted #585858;
 }
 
 @media screen and (max-width: 1280px) {
@@ -231,6 +200,10 @@ button:hover {
 
   .logo {
     font-size: 15pt;
+  }
+
+  body {
+    font-size: 12pt;
   }
 }
 
@@ -270,59 +243,94 @@ button:hover {
   .message {
     width: 98%;
   }
-}
 
-@media screen and (max-width: 730px) {
-  body {
-    font-size: 12pt;
+  .introduction h1 {
+    font-size: 2em;
   }
 }
 
 @media screen and (max-width: 612px) {
+
+  .logo {
+    margin: 0 20px;
+  }
+
+  .project-tile {
+    flex-basis: 100%;
+    font-size: 12pt;
+  }
+  .container {
+    padding: 0;
+  }
+
   .copyright {
     flex-direction: column;
   }
 
+  .email,
+  .name,.message {
+    width: 100%;
+  }
+
   .copyright > div {
-    padding: 20px 0px;
+    padding: 10px 30px;
     width: 100%;
     border: none;
-    text-align: center;
-    font-size: 16pt;
+    font-size: 10pt;
+  }
+
+  .copyright-section {
+    margin-top: -50px;
   }
 }
 
-/* extra small devices */
-@media screen and (max-width: 336px) {
-  .copyright div {
-    font-size: 12pt;
-  }
+
+/* Detailes and hover effects */
+
+.logo div:hover {
+  color: #f2849e;
+}
+
+button:hover {
+  background: #f2849e;
+}
+
+.copyright-section {
+  opacity: 0.5;
+}
+
+.copyright-link:hover {
+  opacity: 1;
+  border: none;
+}
+
+.container a:hover {
+  color: #f2849e;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #f2849e;
+}
+
+.contact li:hover {
+  border: 1px solid #f2849e;
+}
+
+img:hover {
+  transform: scale(1.07);
+}
+
+.introduction a:hover {
+  border: none;
 }
 /*  *
-* {
-  background-color: rgba(255, 0, 0, 0.2);
-}
-* * {
-  background-color: rgba(0, 255, 0, 0.2);
-}
-* * * {
-  background-color: rgba(0, 0, 255, 0.2);
-}
-* * * * {
-  background-color: rgba(255, 0, 255, 0.2);
-}
-* * * * * {
-  background-color: rgba(0, 255, 255, 0.2);
-}
-* * * * * * {
-  background-color: rgba(255, 255, 0, 0.2);
-}
-* * * * * * * {
-  background-color: rgba(255, 0, 0, 0.2);
-}
-* * * * * * * * {
-  background-color: rgba(0, 255, 0, 0.2);
-}
-* * * * * * * * * {
-  background-color: rgba(0, 0, 255, 0.2);
-}
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); } 
