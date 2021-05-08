@@ -250,7 +250,6 @@ button {
 }
 
 @media screen and (max-width: 612px) {
-
   .logo {
     margin: 0 20px;
   }
@@ -268,7 +267,8 @@ button {
   }
 
   .email,
-  .name,.message {
+  .name,
+  .message {
     width: 100%;
   }
 
@@ -283,7 +283,6 @@ button {
     margin-top: -50px;
   }
 }
-
 
 /* Detailes and hover effects */
 
@@ -324,13 +323,3 @@ img:hover {
 .introduction a:hover {
   border: none;
 }
-/*  *
-* { background-color: rgba(255,0,0,.2); }
-* * { background-color: rgba(0,255,0,.2); }
-* * * { background-color: rgba(0,0,255,.2); }
-* * * * { background-color: rgba(255,0,255,.2); }
-* * * * * { background-color: rgba(0,255,255,.2); }
-* * * * * * { background-color: rgba(255,255,0,.2); }
-* * * * * * * { background-color: rgba(255,0,0,.2); }
-* * * * * * * * { background-color: rgba(0,255,0,.2); }
-* * * * * * * * * { background-color: rgba(0,0,255,.2); } 
