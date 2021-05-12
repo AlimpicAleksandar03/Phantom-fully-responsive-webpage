@@ -350,6 +350,103 @@ input {
   border: none;
 }
 
+/* Navigation */
+
+.navigation-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-left: auto;
+  position: relative;
+}
+
+.nav-menu {
+  background-color: #585858;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  height: 100%;
+  width: 25%;
+  list-style: none;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: all 0.75s;
+  color: white;
+  z-index: 1001;
+}
+
+.nav-menu h2 {
+  align-self: flex-start;
+  margin: 10%;
+  margin-bottom: 1.5em;
+}
+
+.nav-menu.active {
+  right: 0;
+  transition: all 0.75s;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+  transition: all 0.01s ease;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+  transition: transform 0.01s ease;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+  transition: transform 0.01s ease;
+}
+
+.hamburger.active {
+  right: 28%;
+  transform: rotate(360deg);
+  transition: all 0.75s ease;
+}
+
+.nav-menu .nav-item:nth-child(5) {
+  border: none;
+}
+
+.nav-item {
+  padding: 1em 0;
+  width: 80%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hamburger {
+  position: fixed;
+  top: 3em;
+  right: 3em;
+  cursor: pointer;
+  transition: all 0.75s ease;
+  z-index: 100;
+}
+
+.bar {
+  display: block;
+  margin: 10px 0;
+  height: 3px;
+  width: 50px;
+  background: #585858;
+  transition: all 0.5s ease;
+}
+
+.nav-item a:hover {
+  color: #f2849e;
+  transition: all 0.25s ease;
+}
+
 @media screen and (max-width: 360px) {
   h1 {
     font-size: 1.75em;
@@ -357,6 +454,18 @@ input {
 }
 
 @media screen and (max-width: 480px) {
+  .nav-menu {
+    width: 80%;
+  }
+
+  .bar {
+    width: 30px;
+  }
+
+  .hamburger.active {
+    right: 85%;
+  }
+
   .tiles li {
     flex-basis: 100%;
   }
@@ -417,6 +526,19 @@ input {
 }
 
 @media screen and (max-width: 736px) {
+  .hamburger {
+    top: 1em;
+    right: 1em;
+  }
+
+  .hamburger.active {
+    right: 53%;
+  }
+
+  .nav-menu {
+    width: 50%;
+  }
+
   .main__header {
     padding: 4em 0 0.1em 0;
   }
@@ -455,6 +577,19 @@ input {
 }
 
 @media screen and (max-width: 980px) {
+  .hamburger {
+    top: 2em;
+    right: 2em;
+  }
+
+  .nav-menu {
+    width: 45%;
+  }
+
+  .hamburger.active {
+    right: 48%;
+  }
+
   .project__tile {
     flex-basis: calc(50% - 2.5em);
   }
