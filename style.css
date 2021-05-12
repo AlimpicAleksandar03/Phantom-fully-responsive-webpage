@@ -454,15 +454,20 @@ input {
 }
 
 @media screen and (max-width: 480px) {
-  .nav-menu {
+  .navbar .nav-menu {
     width: 80%;
+  }
+
+  .navbar .hamburger {
+    top: 1em;
+    right: 1em;
   }
 
   .bar {
     width: 30px;
   }
 
-  .hamburger.active {
+  .navbar .hamburger.active {
     right: 85%;
   }
 
@@ -532,7 +537,7 @@ input {
   }
 
   .hamburger.active {
-    right: 53%;
+    right: 54%;
   }
 
   .nav-menu {
